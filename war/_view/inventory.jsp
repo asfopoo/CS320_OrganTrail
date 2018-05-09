@@ -6,28 +6,31 @@
 	<head>
 		<title>Inventory view</title>
 		<link rel="icon" type="image/x-icon" href="webresources/favicon.ico" />
+		<link rel="stylesheet" href="webresources/inv.css"/>
 	</head>
 
 	<body>
-		inventory (needs styled) 
+		<div class="options">
+		Inventory 
 		
 		
-		<p>
+		
 			<c:forEach var="items" items="${items}">
 				<c:out value = "${items}"/> <br>
 			</c:forEach>	
-		</p>
-		<div>
-			Inventory Size = <c:out value="${size}" escapeXml="false"/> /35  (whatever we choose)
-		</div>
+		
+		
+			Inventory Size = <c:out value="${size}" escapeXml="false"/> /35
+		
 		
 		<br>
 		<br>
 		<br>
-		<div>
-			<form method = "get" action="/OrganTrail/linear">
-				<button type="submit" name="submit" class="btn btn-primary btn-block btn-large">Go Back</button>
-			</form>
+			<div>
+				<form method = "get" action="/OrganTrail/linear">
+					<button type="submit" name="submit" class="btn btn-primary btn-block btn-large">Go Back</button>
+				</form>
+			</div>
 		</div>
 	</body>
 </html>
